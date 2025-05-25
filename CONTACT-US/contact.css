@@ -1,0 +1,587 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+body {
+
+    font-family: 'Gilroy', sans-serif;
+
+}
+
+.navbar {
+
+    background-color: rgba(180, 198, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+
+.navbar li {
+    padding: 5px;
+    font-size: 15px;
+
+}
+
+.navbar li a {
+
+    color: black;
+
+}
+
+
+.navbar li a:hover {
+    color: orange !important;
+
+}
+
+.navbar-nav {
+
+    margin-left: 400px;
+
+}
+
+.dswd-nav {
+
+    margin-left: 130px;
+    color: black;
+    width: 120px;
+}
+
+.top-container {
+
+    margin-top: 50px;
+
+
+}
+
+.iii {
+    margin-top: 20px;
+
+}
+
+p img {
+    width: 40px;
+    /* Adjust image size */
+    height: 40px;
+    /* Adjust image size */
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+}
+
+
+.p1 {
+
+
+    text-align: left;
+    padding: 0;
+
+}
+
+.contact {
+    font-size: 25px;
+    background-color: whitesmoke;
+    margin-left: 40px;
+}
+
+.box {
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border: 2px solid black;
+    box-shadow: inset 0 0 3px 1px rgb(180, 198, 255);
+
+
+}
+
+.howtoreach p {
+
+    border-radius: 3px;
+
+    padding: 10px;
+    font-size: 15px;
+    border: 2px solid black;
+    box-shadow: inset 0 0 5px 1px rgb(180, 198, 255);
+
+
+}
+
+.howtoreach img {
+
+    width: 30px;
+    height: auto;
+
+}
+
+
+.box2 {
+
+
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    height: 200px;
+    border: 2px solid black;
+    box-shadow: inset 0 0 3px 1px rgb(180, 198, 255);
+
+
+}
+
+.row1 {
+    /* Keep the top margin for spacing */
+    width: 100%;
+    /* Use viewport width to ensure fullscreen */
+    margin-top: -10px;
+
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: center;
+
+}
+
+.row1-all-box {
+    width: 10px;
+    margin-top: 20px;
+}
+
+.box3 {
+    flex-wrap: wrap;
+    display: flex;
+
+    width: 720px;
+    /* Take up full width of the parent container */
+    height: 100px;
+
+    gap: 20px;
+
+    /* Ensures equal spacing between elements */
+}
+
+.box3 p {
+    background-color: #1f315c;
+
+    padding: 0px;
+    width: 100%;
+    /* Each <p> will take up equal space */
+    box-sizing: border-box;
+    /* Ensures padding doesn't increase width */
+    border-radius: 5px;
+    font-size: 16px;
+
+    display: flex;
+    /* Use flexbox to center text */
+    align-items: center;
+    /* Vertically center text */
+    justify-content: center;
+    /* Horizontally center text */
+    text-align: center;
+}
+
+.box4 {
+    flex-wrap: wrap;
+
+    margin-left: 0px;
+    margin-left: 15px;
+
+    width: 100%;
+    /* Take up full width of the parent container */
+    height: 90px;
+    margin-left: 0px;
+
+    /* Ensures equal spacing between elements */
+}
+
+
+.box4 p {
+    background-color: #1f315c;
+    border: 2px solid black;
+    padding: 0px;
+    width: 100%;
+    /* Each <p> will take up equal space */
+    max-width: calc(33.33% - 20px);
+    /* Make each item take up one-third of the width with some space for padding */
+    box-sizing: border-box;
+    /* Ensures padding doesn't increase width */
+    border-radius: 5px;
+    font-size: 16px;
+    height: 80px;
+    display: flex;
+    /* Use flexbox to center text */
+    align-items: start;
+    /* Vertically center text */
+    justify-content: start;
+    /* Horizontally center text */
+    text-align: left;
+    text-align: center;
+    align-items: center;
+
+}
+
+.box4 img {
+    width: 40px;
+    /* Adjust image size */
+    height: 40px;
+    /* Adjust image size */
+    margin-left: 30px;
+    margin-right: 50px;
+    border-radius: 5px;
+    justify-content: flex-start;
+}
+
+.style-iframe {
+    width: 100%;
+    height: 363px;
+    border: 0px;
+    margin: 3px;
+    justify-content: left;
+    border: 3px solid black;
+
+
+}
+
+.contacto {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.row2 {
+
+    text-align: center;
+}
+
+.f1 {
+
+    margin-bottom: 20px;
+
+}
+
+.yeah {
+
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: -520px;
+}
+
+.img {
+    margin-left: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+
+    border: 1px solid gray;
+    padding: 6px;
+    border-radius: 5px;
+
+}
+
+.images-bottom img {
+
+    border-radius: 1px;
+
+}
+
+.footer-container {
+
+    height: 35vh;
+    background-image: url('Images/Flag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer-container .footer-wrapper p {
+
+    font-size: 12px;
+
+}
+
+.footer-container .biniimg {
+
+    width: 50%;
+
+}
+
+.footer-container .footer-wrapper p span {
+
+    font-size: 14px;
+
+}
+
+.footer-container .govph a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .govph a:hover {
+
+    color: orange;
+}
+
+.footer-container .gov-links a {
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-container .gov-links a:hover {
+
+    color: orange;
+
+}
+
+.footer-container .stay-connected {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.footer-container .stay-connected a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .stay-connected .bxl-instagram:hover {
+
+    color: violet;
+
+}
+
+.footer-container .stay-connected .bxl-facebook-square:hover {
+
+    color: blue;
+
+}
+
+.footer-container .stay-connected .bxl-twitter:hover {
+
+    color: skyblue;
+
+}
+
+.bottom-images .carousel-item img {
+
+
+    height: 200px;
+    margin-bottom: 15px;
+
+
+}
+
+.bottom-images {
+
+    border-top: 1px solid rgb(180, 198, 255);
+    border-bottom: 1px solid rgb(180, 198, 255);
+
+}
+
+/* Feedback Table Styles */
+.feedback-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.feedback-header {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table-scroll-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 2px solid black;
+    box-shadow: inset 0 0 3px 1px rgb(180, 198, 255);
+    background-color: white;
+}
+
+.feedback-table {
+    margin-bottom: 0;
+    background-color: white;
+}
+
+.feedback-table thead {
+    background-color: rgb(180, 198, 255);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.feedback-table th {
+    font-weight: 700;
+    color: #1f315c;
+}
+
+.feedback-table td {
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.feedback-table tbody tr:hover {
+    background-color: rgba(180, 198, 255, 0.2);
+}
+
+@media screen and (max-width: 1500px) {
+
+    .navbar-nav {
+
+        margin-left: 400px;
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar-nav {
+
+        margin-left: 0;
+
+    }
+
+    .dswd-nav {
+
+        margin-left: 0px;
+    }
+
+
+    .navbar li:hover {
+        border-bottom: 1px solid white;
+
+    }
+
+    .p1 {
+
+
+        margin-left: 3px;
+
+
+
+    }
+
+    .row1,
+    .row2 {
+        flex-direction: column;
+        /* Stack elements vertically */
+    }
+
+    .box,
+    .box2 {
+        width: 98%;
+        /* Ensure inputs span full width */
+    }
+
+    .footer-container {
+        font-size: 12px;
+        height: 120vh;
+        background-color: #0F172A;
+
+    }
+
+    .footer-container .page-link {
+        text-decoration: none;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .footer-container .biniimg {
+
+        width: 30%;
+
+    }
+
+    .republic p {
+
+        height: 80px !important;
+
+    }
+
+    .bottom-images .carousel-item img {
+
+
+        height: 130px;
+        margin-bottom: 15px;
+
+
+    }
+
+    /* Mobile responsive table styles */
+    .table-scroll-container {
+        max-height: 250px;
+    }
+
+    .feedback-table {
+        font-size: 12px;
+    }
+
+    .feedback-table td,
+    .feedback-table th {
+        padding: 8px 5px;
+    }
+
+    .feedback-table td:nth-child(4) {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Custom scrollbar for webkit browsers */
+    .table-scroll-container::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-thumb {
+        background: rgb(180, 198, 255);
+        border-radius: 4px;
+    }
+
+    .table-scroll-container::-webkit-scrollbar-thumb:hover {
+        background: #1f315c;
+    }
+}
