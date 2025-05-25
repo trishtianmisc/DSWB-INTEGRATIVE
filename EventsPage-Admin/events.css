@@ -1,0 +1,381 @@
+/* For animation combined sa jsript */
+.scale-fade {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1.5s ease, transform 0.5s ease;
+}
+
+
+.scale-fade.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+* {
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    position: relative; /* Necessary for positioning the pseudo-element */
+    font-family: 'Gilroy', sans-serif;
+    height: 100vh; /* put to 100vh for */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* 
+  body::before {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0F172A;
+    background-img: url('');
+    filter: blur(5px);
+    z-index: -1;
+  } */
+
+
+  .navbar {
+    background-color: rgba(180, 198, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+
+.navbar li {
+    padding: 5px;
+    font-size: 15px;
+   
+}
+
+.navbar li a {
+
+     color: rgb(40, 40, 41)!important;
+
+}
+
+
+.navbar li a:hover{
+    color: orange !important;
+
+}
+
+.navbar-nav {
+
+    margin-left: 400px;
+
+}
+
+
+
+.dswd-nav {
+
+    margin-left:130px;
+    color: black;
+    width: 120px;
+}
+
+.first-container {
+
+
+    margin-top: 65px;
+
+
+}
+
+.first-container .page-title {
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+.first-container .page-title .heyrow {
+
+    background-color: rgb(180, 198, 255);
+    padding: 10px;
+    border-radius: 5px;
+
+
+}
+
+.first-container .event-card {
+    
+    box-shadow: 0 0 15px 2px rgb(233, 231, 231);
+    width: 80%;
+    padding: 50px;
+
+}
+
+.first-container .event-card  .event-title{
+
+    background-color: #F36F8F;
+    width: 9%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 3px;
+    color: white;
+
+
+}
+
+.first-container .event-card .btn-secondary{
+
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 50px;
+    border: 1px solid rgb(173, 173, 40);
+    background-color: transparent;
+    color: black;
+
+}
+
+.first-container .event-card .btn-secondary:hover{
+
+
+    background-color: rgb(173, 173, 40);
+    color: white;
+
+}
+
+.first-container .event-card h3 {
+
+    font-weight: 700;
+
+}
+
+.first-container .event-card h6 {
+
+    color: rgb(110, 106, 106);
+
+}
+
+.bottom-images {
+
+    margin-top: 50px;
+
+}
+
+.bottom-images .carousel-item img{
+
+
+    height: 200px;
+    margin-bottom: 15px;
+
+}
+
+.footer-container {
+
+    height: 35vh;
+    background-image: url('Images/Flag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer-container .footer-wrapper p{
+
+    font-size: 12px;
+
+}
+
+.footer-container .biniimg {
+
+    width: 50%;
+
+}
+
+.footer-container .footer-wrapper p span{
+
+    font-size: 14px;
+
+}
+
+.footer-container .govph a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .govph a:hover {
+
+    color: orange;
+}
+
+
+.footer-container .gov-links a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-container .gov-links a:hover{
+
+    color: orange;
+
+}
+
+.footer-container .stay-connected {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.footer-container .stay-connected a{
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .stay-connected .bxl-instagram:hover{
+
+    color:violet;
+
+}
+
+.footer-container .stay-connected .bxl-facebook-square:hover{
+
+    color:blue;
+
+}
+
+.footer-container .stay-connected .bxl-twitter:hover{
+
+    color:skyblue;
+
+}
+
+
+
+@media screen and (max-width: 1500px){
+
+    .navbar-nav {
+
+        margin-left: 400px;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .first-container .event-card {
+    
+     
+        width: 90%;
+  
+    
+    }
+
+    .first-container .event-card  .event-title{
+
+        width: 20%;
+    
+    }
+    
+    .first-container .event-card .read-more{
+    
+        width: 42%;
+ 
+    }
+
+ 
+    .dswd-nav {
+
+        margin-left: 0px;
+    }
+
+    .navbar-nav {
+
+        margin-left: 0px;
+
+    }
+    
+
+    .navbar li:hover{
+        border-bottom: 1px solid white;
+    
+    }
+
+    .footer-container {
+        font-size: 12px;
+        height: 120vh;
+        background-color: #0F172A;
+    
+    }
+
+    .justified-text {
+        text-align: justify;
+      }
+
+    .footer-container .page-link {
+        text-decoration: none;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .footer-container .biniimg {
+
+        width: 30%;
+
+    }
+
+    .republic p{
+
+        height: 80px !important;
+
+    }
+
+
+    .bottom-images .carousel-item img{
+
+
+        height: 130px;
+        margin-bottom: 15px;
+    
+    
+    }
+    
+
+  }
