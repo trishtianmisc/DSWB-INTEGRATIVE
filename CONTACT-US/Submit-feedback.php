@@ -1,35 +1,36 @@
 <?php
-// Database credentials
+// DB credentials
 $host = "localhost";
 $username = "root";
 $password = "";
 $database = "feedback";
 
-// Create connection
+// Create a connection to the MySQL database
 $conn = new mysqli($host, $username, $password, $database);
 
-// Check connection
+// Check if the connection was successful
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  die("Connection failed: " . $conn->connect_error); // If not, terminate the script
 }
 
-// Get form data
+// Retrieve submitted form data using POST method
 $name = $_POST['name'];
 $email = $_POST['email'];
 $contact = $_POST['contact'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-// Insert into database
+// Prepare SQL query to insert the feedback into the database with the current date
 $sql = "INSERT INTO feedback (FEED_NAME, FEED_EMAIL, FEED_CONTACT, FEED_SUBJECT, FEED_MESSAGE, FEED_DATE)
         VALUES (?, ?, ?, ?, ?, CURRENT_DATE())";
 
+// Prepare the SQL statement to prevent SQL injection
 $stmt = $conn->prepare($sql);
+
+// attach the user input values to the prepared statement
 $stmt->bind_param("sssss", $name, $email, $contact, $subject, $message);
-
-
-//Design in the Feedback sub successfully
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,13 +43,12 @@ $stmt->bind_param("sssss", $name, $email, $contact, $subject, $message);
       background-color: #f4f4f4;
     }
 
-    
-
+    /* Styling for the success popup message */
     .popup {
       display: block;
       padding: 20px;
-      background-color: #dff0d8;
-      border: 1px solid #3c763d;
+      background-color: #dff0d8; /* light green */
+      border: 1px solid #3c763d; /* dark green border */
       color: #3c763d;
       border-radius: 10px;
       margin-bottom: 20px;
@@ -57,11 +57,13 @@ $stmt->bind_param("sssss", $name, $email, $contact, $subject, $message);
       text-align: center;
     }
 
+    /* Animation for the popup message */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Box to display the recent feedback details */
     .feedback-box {
       background: #fff;
       padding: 15px;
@@ -82,13 +84,17 @@ $stmt->bind_param("sssss", $name, $email, $contact, $subject, $message);
 <body>
 
 <?php
+// Execute the insert query
 if ($stmt->execute()) {
+  // If successful, show success message
   echo "<div class='popup'>Feedback submitted successfully.</div>";
 
-  // Fetch the latest feedback
+  // Retrieve the most recent feedback entry
   $result = $conn->query("SELECT FEED_NAME, FEED_SUBJECT, FEED_MESSAGE, FEED_DATE 
                           FROM feedback 
                           ORDER BY FEED_ID DESC LIMIT 1");
+
+  // Display the latest feedback in a styled box
   if ($result && $row = $result->fetch_assoc()) {
     echo "<div class='feedback-box'>";
     echo "<h3>Recent Feedback</h3>";
@@ -99,9 +105,12 @@ if ($stmt->execute()) {
     echo "</div>";
   }
 } else {
+  // If the query fails, display an error message
   echo "<div class='popup' style='background-color: #f2dede; color: #a94442; border-color: #ebccd1;'>
         Error: " . htmlspecialchars($stmt->error) . "</div>";
 }
+
+// Close the prepared statement and database connection
 $stmt->close();
 $conn->close();
 ?>
