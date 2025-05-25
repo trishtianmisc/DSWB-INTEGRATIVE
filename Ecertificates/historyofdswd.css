@@ -1,0 +1,463 @@
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.1;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); /* Slight zoom-in effect */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+body {
+    position: relative; /* Necessary for positioning the pseudo-element */
+    font-family: 'Gilroy', sans-serif;
+    height: 100vh; /* Full screen height */
+    margin: 0; /* Remove default margin */
+    background-image: url(img-header.jpg);
+  }
+  
+  /* Create a pseudo-element for the blurred background */
+  body::before {
+    content: ''; /* Necessary for creating an empty block */
+    position: absolute; /* Position it over the body */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Flag.png');
+    background-color: white;
+    filter: blur(5px);
+    
+    z-index: -1;
+  }
+
+  .navbar {
+
+    background-color: rgba(180, 198, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+   
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+
+.navbar li {
+    padding: 5px;
+    font-size: 15px;
+   
+}
+
+.navbar li a {
+
+     color: black;
+
+}
+
+
+.navbar li a:hover{
+    color: orange !important;
+
+}
+
+.navbar-nav {
+
+    margin-left: 400px;
+
+}
+
+.dswd-nav {
+
+    margin-left:130px;
+    color: black;
+    width: 120px;
+
+}
+
+.footer-container {
+
+    height: 35vh;
+    background-image: url('Images/Flag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer-container .footer-wrapper p{
+
+    font-size: 12px;
+
+}
+
+.footer-container .biniimg {
+
+    width: 50%;
+
+}
+
+.footer-container .footer-wrapper p span{
+
+    font-size: 14px;
+
+}
+
+.footer-container .govph a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .govph a:hover {
+
+    color: orange;
+}
+
+.footer-container .gov-links a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.footer-container .gov-links a:hover{
+
+    color: orange;
+
+}
+
+.footer-container .stay-connected {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.footer-container .stay-connected a{
+
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container .stay-connected .bxl-instagram:hover{
+
+    color:violet;
+
+}
+
+.footer-container .stay-connected .bxl-facebook-square:hover{
+
+    color:blue;
+
+}
+
+.footer-container .stay-connected .bxl-twitter:hover{
+
+    color:skyblue;
+
+}
+
+/* MODIFIED */
+.wrapper {
+
+   
+    
+    width: 90%;
+
+}
+.row-wrapper{
+ 
+   
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgb(210, 205, 205);
+    box-shadow: inset 0 0 5px 1px     rgb(180, 198, 255);
+}
+
+.row-wrapper img{
+
+    height: 500px;
+
+}
+
+
+.row-wrapper2{
+    border-radius: 10px;
+   
+
+}
+.row-wrapper2 img{
+    border-radius: 10px; 
+    background-color: rgb(194, 170, 142); 
+
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0);
+    transition: transform 0.3s ease;
+    
+
+}
+
+.image-history {
+
+    height: 1500px;
+
+}
+.row-wrapper2 p{
+    border-radius: 10px; 
+    background-color: rgb(231, 224, 216); 
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0); 
+    padding: 20px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+
+}
+.row-wrapper2 img:hover{
+    color: blue;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+.row-wrapper2 p:hover{
+    transform: scale(1.1); /* Slight zoom effect */
+}
+.first-container {
+
+    background-color: white;
+    height: 100vh;
+    
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden; /* Prevent any overflow */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+}
+.video-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; 
+        
+}
+
+
+
+.first-container h1{
+
+    font-size: 50px;
+    font-weight: 600;
+    color: black;
+
+    
+}
+.second-container{
+
+    height: 230vh;
+    background-color:     rgb(180, 198, 255);
+}
+
+.text-header h1{
+
+    margin-bottom: 50px ;
+    margin-top: 30px;
+
+}
+.carousel{
+    
+
+}
+.carousel img{
+ width: 80%; 
+    height: auto; 
+    object-fit: cover; 
+}
+.carousel img {
+    height: 300px; 
+}
+
+.third-container{
+    background-color: white;
+    height: 150vh;
+}
+.images img{
+    height: 300px ;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(3px);
+    transform: translate(-100%);
+    transition: all 1s ease;
+
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+
+
+}
+
+
+
+
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+@media screen and (max-width: 1500px){
+
+    .navbar-nav {
+
+        margin-left: 400px;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar-nav{
+
+        margin-left: 0;
+
+    }
+    .wrapper {
+
+   
+    
+        width: 100%;
+    
+    }
+    .first-container{
+        margin-top: 0px;
+        height: 70vh;
+    }
+
+    .row-wrapper img{
+
+        height: 200px;
+    
+    }
+    .second-container{
+
+        height: 370vh;
+        
+
+    }
+
+    .image-history {
+
+        height: 900px;
+    
+    }
+    .third-container{
+        height: 400vh;
+    }
+    .carousel img{
+        width: 100%; 
+        height: auto;
+        object-fit: cover; 
+    }
+    .carousel img {
+        height: auto; 
+    }
+    .images img{
+        margin-top: 60px;
+    }
+
+
+    .dswd-nav {
+
+        margin-left: 0px;
+    }
+    
+
+    .navbar li:hover{
+        border-bottom: 1px solid white;
+    
+    }
+
+    .footer-container {
+        font-size: 12px;
+        height: 120vh;
+        background-color: #0F172A;
+    
+    }
+
+    .footer-container .page-link {
+        text-decoration: none;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .footer-container .biniimg {
+
+        width: 30%;
+
+    }
+
+    .republic p{
+
+        height: 80px !important;
+
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+
+    .second-container{
+
+        height: 320vh;
+        
+
+    }
+
+    .third-container{
+        height: 340vh;
+    }
+
+}
