@@ -1,0 +1,9 @@
+CREATE TABLE `links` (
+  `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `link` longtext NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `date` date NOT NULL,
+  `readmore` longtext NOT NULL,
+  UNIQUE KEY `link_id` (`link_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=526 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
