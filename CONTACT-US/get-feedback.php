@@ -1,5 +1,5 @@
 <?php
-// Database credentials
+// DB credentials
 $host = "localhost";
 $username = "root";
 $password = "";
@@ -18,16 +18,20 @@ function formatDate($date) {
     return date('M d, Y', strtotime($date));
 }
 
-// Query to get the latest feedback entries
+// Query to get the latest or new feedback entries
 $sql = "SELECT FEED_NAME, FEED_SUBJECT, FEED_MESSAGE, FEED_DATE 
         FROM feedback 
         ORDER BY FEED_DATE DESC 
         LIMIT 8";
-
+// run
 $result = $conn->query($sql);
 
+
+//Initialize or pag create sa array to hold feedback data
 $feedbackData = array();
 
+
+//check if there are resutls
 if ($result->num_rows > 0) {
     // Output data of each row
     while($row = $result->fetch_assoc()) {
